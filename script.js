@@ -1,11 +1,5 @@
 'use strict';
 
-/*
-console.log(document.querySelector('.message').textContent);
-document.querySelector('.guess').value=12;
-console.log(document.querySelector('.guess').value);
-*/
-
 // lets define secret no ranging from 1 to 10;
 let secretno = Math.trunc(Math.random() * 10) + 1;
 console.log(`secret no is ${secretno}`);
@@ -18,8 +12,7 @@ let highscore =0;
 document.querySelector('.check').addEventListener('click',function(){
     const userval =Number(document.querySelector('.guess').value);
     console.log(`guessed no is ${userval}`);
-
-    
+ 
     if(score !=0){
         if(!userval){
             document.querySelector('.message').textContent="NO number entered";
@@ -52,13 +45,9 @@ document.querySelector('.check').addEventListener('click',function(){
                     document.querySelector('.number').textContent=secretno;
                     document.querySelector('.message').textContent="You Lost ";
                 }
-            }
-            
+            }   
         }
-
     }
-    
-
 });
 
 document.querySelector('.again').addEventListener('click',function(){
